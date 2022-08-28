@@ -1,0 +1,14 @@
+<section>
+    {{#if posts.length}}
+    <div class="new-title">
+        <h1>New Posts</h1>
+    </div>
+    <div class="d-flex flex-row new-reviews">
+        {{#each posts as |post|}}
+        <section>
+            {{> post-info post}}
+        </section>
+        {{/each}}
+    </div>
+    {{/if}}
+</section>
