@@ -1,3 +1,14 @@
-{{> post-info post}}
-
-{{> comments post.comments}}
+<div class="row">
+    <article class="col post single-post">
+        <div class="titlediv">
+            <h1 class="title">{{post.title}}</h1>
+            <h3 class="credits">{{format_date post.created_at}} by {{post.user.username}}</h3>
+        </div>
+        <div class="mb-3">
+            <p class="post-text">{{post.post_text}}</p>
+        </div>
+    </article>
+    <section class="col">
+        {{> comments post.comments}}
+    </section>
+</div>

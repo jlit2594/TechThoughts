@@ -1,4 +1,13 @@
-<div class="comments">
+<div class="post comments">
+  <form>
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="m-3 form-label">Commenting as {{session.username}}</label>
+      <textarea class="comment-form form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+    <div class="m-3 cmt-sbmt">
+      <button class="btn btn-info">Submit</button>
+    </div>
+  </form>
   {{#each this}}
   <section class="comment">
     <div class="meta">

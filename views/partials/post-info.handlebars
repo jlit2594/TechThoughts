@@ -1,9 +1,8 @@
-<article class="post">
-  <div class="title">
-    <a class="post-link" href="/posts/{{id}}" target="_blank">{{title}}</a>
-    <p class="post-credits">{{format_date created_at}}</p>
+<div class="card post" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title text-white">{{title}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted post-credits">{{format_date created_at}}</h6>
+    <p class="card-text">{{post_text}}</p>
+    <a href="/post/{{id}}" class="card-link post-link">Read more</a>
   </div>
-  <div>
-    <p class="post-text">{{text}}</p>
-  </div>
-</article>
+</div>

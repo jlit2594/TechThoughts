@@ -1,22 +1,21 @@
-<div class="row">
-    <div class="col d-flex flex-column login" id="oldUser">
-        <div>
-            <h2>Returning User</h2>
+<div class="flex-container">
+    <div class="row d-flex login">
+        <div class="col d-flex flex-column " id="oldUser">
+            <form id="return-login">
+                <div class="mb-3">
+                    <label for="old-username" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="old-username" aria-describedby="username">
+                </div>
+                <div class="mb-3">
+                    <label for="old-password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="old-password">
+                </div>
+                <div class="sbmt">
+                    <p><a class="post-link" href="/signup">New User? Make an account here!</a></p>
+                    <button type="submit" class="btn btn-info" id="loginbtn">Submit</button>
+                </div>
+            </form>
         </div>
-
-        <form id="return-login">
-            <div class="mb-3">
-                <label for="old-username" class="form-label">Username</label>
-                <input type="text" class="form-control" id="old-username" aria-describedby="username">
-            </div>
-            <div class="mb-3">
-                <label for="old-password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="old-password">
-            </div>
-            <button type="submit" class="btn btn-success">Submit</button>
-        </form>
-    </div>
-    <div>
-        <h2><a href="/signup">New User? Make an account here!</a></h2>
     </div>
 </div>
+<script src="/js/login.js"></script>

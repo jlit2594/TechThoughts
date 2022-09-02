@@ -1,26 +1,25 @@
-<div class="col d-flex flex-column login" id="newUser">
-    <div>
-        <h2>New User</h2>
+<div class="flex-container">
+    <div class="row d-flex login">
+        <div class="col d-flex flex-column " id="newUser">
+            <form id="new-login">
+                <div class="mb-3">
+                    <label for="new-email" class="form-label">Email Address</label>
+                    <input type="text" class="form-control" id="new-email">
+                </div>
+                <div class="mb-3">
+                    <label for="new-username" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="new-username">
+                </div>
+                <div class="mb-3">
+                    <label for="new-password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="new-password">
+                </div>
+                <div class="sbmt">
+                    <p><a class="post-link" href="/login">Already have an account? Login here!</a></p>
+                    <button type="submit" class="btn btn-info" id="signbtn">Submit</button>
+                </div>
+            </form>
+        </div>
     </div>
-
-    <form id="new-login">
-        <div class="mb-3">
-            <label for="new-email" class="form-label">Email</label>
-            <input type="text" class="form-control" id="new-email" aria-describedby="email">
-        </div>
-
-        <div class="mb-3">
-            <label for="new-username" class="form-label">Username</label>
-            <input type="text" class="form-control" id="new-username" aria-describedby="username">
-        </div>
-
-        <div class="mb-3">
-            <label for="new-password" class="form-label">Password</label>
-            <input type="password" class="form-control" id="new-password">
-        </div>
-        <button type="submit" class="btn btn-success">Submit</button>
-     </form>
-     <div>
-        <h2><a href="/login">Already have an account? Login here!</a></h2>
-     </div>
 </div>
+<script src="/js/login.js"></script>

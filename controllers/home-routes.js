@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
-const { Post, User, Comment, Vote } = require('../models');
+const { Post, User, Comment } = require('../models');
 
 // this will get all posts to display on the homepage
 router.get('/', (req, res) => {
@@ -67,7 +67,7 @@ router.get('/post/:id', (req, res) => {
         ],
         include: [
             {
-                Model: Comment,
+                model: Comment,
                 attributes: [
                     'id',
                     'comment_text', 
@@ -110,5 +110,9 @@ router.get('/login', (req, res) => {
     // renders login page
     res.render('login')
 });
+
+router.get('/signup', (req, res) => {
+    res.render('signup')
+})
 
 module.exports = router;
