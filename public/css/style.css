@@ -1,0 +1,41 @@
+body {
+    background-color: #040d17;
+    font-family: Arial, Helvetica, sans-serif;
+    color: aliceblue;
+}
+
+.hero {
+    height: 10rem;
+    background-image: url('../img/circuit.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar {
+    justify-content: center;
+    border-bottom: solid black 2px;
+    color: aliceblue;
+}
+
+.navbar-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-nav {
+    width: 100%;
+    justify-content: space-around;
+}
+
+.post-link {
+    color: #31b6d9;
+}
+
+.new-title {
+    text-align: center;
+    border-bottom: solid #31b6d9 3px;
+}
