@@ -1,8 +1,13 @@
 <div class="post comments">
   <form>
     <div class="mb-3">
+      {{#if session.loggedIn}}
       <label for="exampleFormControlTextarea1" class="m-3 form-label">Commenting as {{session.username}}</label>
       <textarea class="comment-form form-control" id="comment-text" rows="3"></textarea>
+      {{else}}
+      <label for="exampleFormControlTextarea1" class="m-3 form-label">Sorry! You have to be logged in to comment!</label>
+      <textarea class="comment-form form-control" id="disabled comment-text" rows="3"></textarea>
+      {{#if}}
     </div>
     <div class="m-3 cmt-sbmt">
       <button class="btn btn-info" id="cmt">Submit</button>
