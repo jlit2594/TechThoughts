@@ -1,12 +1,17 @@
 async function addComment(event) {
     event.preventDefault();
 
-    const commentText = document.querySelector('#comment-text').value.trim();
+    const comment_text = document.querySelector('#comment-text').value.trim();
+    const post_id = window.location.toString().split('/')[
+        window.location.toString().split('/').length - 1
+    ];
 
-    if (commentText) {
+    console.log(comment_text, post_id)
+
+    if (comment_text) {
         const response = await fetch('/api/comments', {
             method: 'POST',
-            body: JSON.stringify({ commentText }),
+            body: JSON.stringify({ comment_text, post_id }),
             headers: {'Content-Type': 'application/json'}
         })
 

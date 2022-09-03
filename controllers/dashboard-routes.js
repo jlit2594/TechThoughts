@@ -53,6 +53,7 @@ router.get('/', withAuth, (req, res) => {
 });
 
 router.get('/add-post', (req, res) => {
+    loggedIn: req.session.loggedIn;
     res.render('add-post')
 })
 
