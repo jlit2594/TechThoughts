@@ -52,6 +52,7 @@ router.get('/', withAuth, (req, res) => {
     });
 });
 
+// renders the add-post page, ensures user stays logged in
 router.get('/add-post', (req, res) => {
     res.render('add-post', {
         loggedIn: req.session.loggedIn

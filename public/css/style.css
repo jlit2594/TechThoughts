@@ -102,3 +102,16 @@ body {
     display: flex;
     justify-content: flex-end;
 }
+
+.comment-user {
+    color: #c7f9fe;
+    font-style: italic;
+    font-size: smaller;
+}
+
+#comment-delete {
+    color: #c7f9fe;
+    font-style: italic;
+    font-size: smaller;
+    
+}

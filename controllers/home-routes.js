@@ -103,6 +103,7 @@ router.get('/post/:id', (req, res) => {
     });
 });
 
+// renders login page
 router.get('/login', (req, res) => {
     // if (req.session.loggedIn) {
     //     res
@@ -112,6 +113,7 @@ router.get('/login', (req, res) => {
     res.render('login')
 });
 
+// renders sign up page
 router.get('/signup', (req, res) => {
     res.render('signup');
 });

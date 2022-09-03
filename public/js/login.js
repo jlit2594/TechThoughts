@@ -16,7 +16,6 @@ async function login(event) {
 
         if (response.ok) {
             document.location.replace('/dashboard/')
-            loggedIn: true;
         } else {
             alert(response.statusText)
         }
@@ -43,7 +42,6 @@ async function signUp(event) {
 
         if (response.ok) {
             console.log('Success');
-            loggedIn: true;
             document.location.replace('/dashboard/');
         } else {
             alert(response.statusText)
