@@ -1,15 +1,33 @@
 <div class="row">
-    <article class="col post single-post">
-        <div class="titlediv">
-            <h1 class="title">{{post.title}}</h1>
-            <h3 class="credits">{{format_date post.created_at}} by {{post.user.username}}</h3>
-        </div>
-        <div class="mb-3">
-            <p class="post-text">{{post.post_text}}</p>
-        </div>
-    </article>
+    <section class="full-post w-50">
+         <article class="m-3 p-3 col post single-post">
+            <div class="titlediv">
+                <h1 class="title">{{post.title}}</h1>
+                <h3 class="credits">{{format_date post.created_at}} by {{post.user.username}}</h3>
+            </div>
+            <div class="mb-3">
+                <p class="post-text">{{post.post_text}}</p>
+            </div>
+        </article>   
+        <form>
+            <div class="mb-3">
+            {{#if loggedIn}}
+            <label for="exampleFormControlTextarea1" class="m-3 form-label">Commenting as {{session.username}}</label>
+            <textarea class="comment-form form-control" id="comment-text" rows="3"></textarea>
+            {{else}}
+            <label for="exampleFormControlTextarea1" class="m-3 form-label">Sorry! You have to be logged in to comment!</label>
+            <textarea class="comment-form form-control" id="disabled comment-text" rows="3" disabled></textarea>
+            {{/if}}
+            </div>
+            <div class="m-3 cmt-sbmt">
+            <button class="btn btn-info" id="cmt">Submit</button>
+            </div>
+        </form>
+    </section>
+
     <section class="col">
         {{> comments post.comments}}
     </section>
+
 </div>
 <script src="/js/add-comment.js"></script>

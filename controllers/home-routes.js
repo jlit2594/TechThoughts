@@ -53,10 +53,6 @@ router.get('/', (req, res) => {
 
 // gets single post info to display by itself
 router.get('/post/:id', (req, res) => {
-    if (req.session.loggedIn) {
-        loggedIn = true;
-    }
-    
     Post.findOne({
         // where id matches
         where: {
@@ -96,7 +92,8 @@ router.get('/post/:id', (req, res) => {
 
             // renders the blog-post partial
             res.render('blog-post', {
-                post
+                post,
+                loggedIn: req.session.loggedIn
             })
         }
     })

@@ -53,8 +53,9 @@ router.get('/', withAuth, (req, res) => {
 });
 
 router.get('/add-post', (req, res) => {
-    loggedIn: req.session.loggedIn;
-    res.render('add-post')
+    res.render('add-post', {
+        loggedIn: req.session.loggedIn
+    })
 })
 
 module.exports = router;
