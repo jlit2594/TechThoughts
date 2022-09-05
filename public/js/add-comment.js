@@ -17,7 +17,7 @@ async function addComment(event) {
 
         if (response.ok) {
             console.log(response);
-            // document.location.reload();
+            document.location.reload();
         } else {
             alert(response.statusText)
         }
