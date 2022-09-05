@@ -12,7 +12,7 @@
         <form>
             <div class="mb-3">
             {{#if loggedIn}}
-            <label for="exampleFormControlTextarea1" class="m-3 form-label">Commenting as {{session.username}}</label>
+            <label for="exampleFormControlTextarea1" class="m-3 form-label">Leave a Comment</label>
             <textarea class="comment-form form-control" id="comment-text" rows="3"></textarea>
             {{else}}
             <label for="exampleFormControlTextarea1" class="m-3 form-label">Sorry! You have to be logged in to comment!</label>
@@ -27,6 +27,7 @@
 
     <section class="col">
         {{> comments post.comments}}
+        {{log post.comments}}
     </section>
 
 </div>

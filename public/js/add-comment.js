@@ -16,7 +16,8 @@ async function addComment(event) {
         })
 
         if (response.ok) {
-            document.location.reload();
+            console.log(response);
+            // document.location.reload();
         } else {
             alert(response.statusText)
         }
