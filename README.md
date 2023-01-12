@@ -1,4 +1,4 @@
-# TECH THOUGHTS
+# [TECH THOUGHTS](https://floating-shelf-79387.herokuapp.com/)
 
 ![This is a screenshot of the landing page](/public/img/screenshot.png)
 
